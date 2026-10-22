@@ -10,9 +10,11 @@ Eojin
 
 ## H00 — calibrate
 Claude (models used)
-- (to be filled at wrap)
+- Director (Opus 5.5): ran the 21-file kit check and the three content checks, ran `probe` plus the extra GitHub line, wrote the plain-English explanations and the track implications in `docs/PROBES.md`, logged caveats, updated the run sheet and `COSTS.md` placeholders. H00 ran in one cloud session together with T1-S01, T2-S01, T3-S01 and T4-S01 at Eojin's request.
+- `verifier` (Opus 5.5): checked the acceptance criteria and wrote `docs/verify/H00.md`.
+- No `builder`, `chores` or `redteam` run: there was no code or document build to review, and the file check was a few shell commands.
 Eojin
-- (to be filled at wrap)
+- Uploaded the kit and asked for the D0 launch. Still to do: give the credit balances for `COSTS.md`, read "What this means for the tracks" in `docs/PROBES.md`, and squash-merge the PR.
 
 ## H01 — portfolio README + index
 Claude (models used)
