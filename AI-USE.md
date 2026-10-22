@@ -18,9 +18,10 @@ Eojin
 
 ## H01 — portfolio README + index
 Claude (models used)
-- (to be filled at wrap)
+- Director (Opus 5.5): read each track README on `main` (all four repos attached), copied the four status cells, added verify-report links, updated the Status paragraph with the merged sessions, ran the link checks. Done inline without `chores` because it was a handful of commands.
+- `verifier` (Opus 5.5): final check, `docs/verify/H01.md`.
 Eojin
-- (to be filled at wrap)
+- Asked for H01 to run on D0. Still to do: record the H01 cost in `COSTS.md`, open the five `docs/STORY.md` source links in a browser, pick allowed status words for 3E and 4E.
 
 ## H99 — final gate + credit sink plan
 Claude (models used)
