@@ -29,7 +29,7 @@ Status words used everywhere in this portfolio: `Planned` → `In progress (sess
 | 3 · IAM (Microsoft SC-300) | Easy | 3E Anti-Takeover Tenant — a Microsoft Entra trial tenant hardened against reset abuse, mapped to Canadian guidance (`3e-anti-takeover-tenant/`) | [td-3-iam](https://github.com/DK1051/td-3-iam) | Scaffolded — Eojin is configuring the tenant |
 | 3 · IAM (Microsoft SC-300) | Hard | 3H Lifecycle for People and Service Accounts — joiner/mover/leaver engine with attestation and separation-of-duties rules (`3h-lifecycle/`) | [td-3-iam](https://github.com/DK1051/td-3-iam) | Planned |
 | 3 · IAM (Microsoft SC-300) | Hard + AI | 3A Agent Passport — an AI assistant that can propose access changes but never grant them (`3a-agent-passport/`) | [td-3-iam](https://github.com/DK1051/td-3-iam) | Planned |
-| 4 · Cloud (Microsoft AZ-104) | Easy | 4E Canada-Only Landing Zone — Azure policies, a least-privilege role and budget alerts (`4e-canada-landing-zone/`) | [td-4-cloud](https://github.com/DK1051/td-4-cloud) | Planned |
+| 4 · Cloud (Microsoft AZ-104) | Easy | 4E Canada-Only Landing Zone — Azure policies, a least-privilege role and budget alerts (`4e-canada-landing-zone/`) | [td-4-cloud](https://github.com/DK1051/td-4-cloud) | Built (Claude's work verified) |
 | 4 · Cloud (Microsoft AZ-104) | Hard | 4H Secretless Deploy — deployments from GitHub Actions with no stored cloud secrets, plus "cannot-do" tests (`4h-secretless-deploy/`) | [td-4-cloud](https://github.com/DK1051/td-4-cloud) | Planned |
 | 4 · Cloud (Microsoft AZ-104) | Hard + AI | 4A Containment Runbook Copilot — an AI that drafts dry-run containment steps, scored against my answer keys (`4a-containment-copilot/`) | [td-4-cloud](https://github.com/DK1051/td-4-cloud) | Planned |
 
