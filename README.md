@@ -20,16 +20,16 @@ Status words used everywhere in this portfolio: `Planned` → `In progress (sess
 
 | Track | Level | Project | Repo | Status |
 |---|---|---|---|---|
-| 1 · Helpdesk (CompTIA A+) | Easy | 1E Front Desk Casebook — caller-verification SOP, 10 tickets, KB articles in English and Korean (`1e-front-desk-casebook/`) | [td-1-helpdesk](https://github.com/DK1051/td-1-helpdesk) | Planned |
+| 1 · Helpdesk (CompTIA A+) | Easy | 1E Front Desk Casebook — caller-verification SOP, 10 tickets, KB articles in English and Korean (`1e-front-desk-casebook/`) | [td-1-helpdesk](https://github.com/DK1051/td-1-helpdesk) | In progress (T1-S01) |
 | 1 · Helpdesk (CompTIA A+) | Hard | 1H Verified Reset Service — a reset API that enforces callback, one-time code and manager approval in order (`1h-verified-reset/`) | [td-1-helpdesk](https://github.com/DK1051/td-1-helpdesk) | Planned |
 | 1 · Helpdesk (CompTIA A+) | Hard + AI | 1A Helpdesk Bot Stress Test — an AI helpdesk assistant tested against scripted social-engineering calls (`1a-bot-stress-test/`) | [td-1-helpdesk](https://github.com/DK1051/td-1-helpdesk) | Planned |
-| 2 · SOC (CompTIA Security+) | Easy | 2E Blind Hunt — hunt five hidden takeovers in 14 days of generated sign-in logs, graded against a sealed answer key (`2e-blind-hunt/`) | [td-2-soc](https://github.com/DK1051/td-2-soc) | Planned |
+| 2 · SOC (CompTIA Security+) | Easy | 2E Blind Hunt — hunt five hidden takeovers in 14 days of generated sign-in logs, graded against a sealed answer key (`2e-blind-hunt/`) | [td-2-soc](https://github.com/DK1051/td-2-soc) | In progress (T2-S01; hunt data waits for step 8) |
 | 2 · SOC (CompTIA Security+) | Hard | 2H Takeover Detection Pack — KQL detections with a test harness on the Kusto emulator (`2h-detection-pack/`) | [td-2-soc](https://github.com/DK1051/td-2-soc) | Planned |
 | 2 · SOC (CompTIA Security+) | Hard + AI | 2A Injection-Proof Triage — an AI alert-triage assistant measured against prompt-injection attempts (`2a-triage/`) | [td-2-soc](https://github.com/DK1051/td-2-soc) | Planned |
-| 3 · IAM (Microsoft SC-300) | Easy | 3E Anti-Takeover Tenant — a Microsoft Entra trial tenant hardened against reset abuse, mapped to Canadian guidance (`3e-anti-takeover-tenant/`) | [td-3-iam](https://github.com/DK1051/td-3-iam) | Planned |
+| 3 · IAM (Microsoft SC-300) | Easy | 3E Anti-Takeover Tenant — a Microsoft Entra trial tenant hardened against reset abuse, mapped to Canadian guidance (`3e-anti-takeover-tenant/`) | [td-3-iam](https://github.com/DK1051/td-3-iam) | Scaffolded — Eojin is configuring the tenant |
 | 3 · IAM (Microsoft SC-300) | Hard | 3H Lifecycle for People and Service Accounts — joiner/mover/leaver engine with attestation and separation-of-duties rules (`3h-lifecycle/`) | [td-3-iam](https://github.com/DK1051/td-3-iam) | Planned |
 | 3 · IAM (Microsoft SC-300) | Hard + AI | 3A Agent Passport — an AI assistant that can propose access changes but never grant them (`3a-agent-passport/`) | [td-3-iam](https://github.com/DK1051/td-3-iam) | Planned |
-| 4 · Cloud (Microsoft AZ-104) | Easy | 4E Canada-Only Landing Zone — Azure policies, a least-privilege role and budget alerts (`4e-canada-landing-zone/`) | [td-4-cloud](https://github.com/DK1051/td-4-cloud) | Planned |
+| 4 · Cloud (Microsoft AZ-104) | Easy | 4E Canada-Only Landing Zone — Azure policies, a least-privilege role and budget alerts (`4e-canada-landing-zone/`) | [td-4-cloud](https://github.com/DK1051/td-4-cloud) | Built (Claude's work verified) |
 | 4 · Cloud (Microsoft AZ-104) | Hard | 4H Secretless Deploy — deployments from GitHub Actions with no stored cloud secrets, plus "cannot-do" tests (`4h-secretless-deploy/`) | [td-4-cloud](https://github.com/DK1051/td-4-cloud) | Planned |
 | 4 · Cloud (Microsoft AZ-104) | Hard + AI | 4A Containment Runbook Copilot — an AI that drafts dry-run containment steps, scored against my answer keys (`4a-containment-copilot/`) | [td-4-cloud](https://github.com/DK1051/td-4-cloud) | Planned |
 
