@@ -1,0 +1,28 @@
+# CI for the hub repo. The hub holds no code, so the only check is a secret scan.
+# The branch ruleset requires a job with the exact id `checks` — do not rename it.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# gitleaks reads the pull request's commits and comments on a leak
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out (full history, so gitleaks can scan every commit in the PR)
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
