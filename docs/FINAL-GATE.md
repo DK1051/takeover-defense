@@ -1,6 +1,6 @@
 # Final gate: H99 (2026-11-01)
 
-This is the last check before the Nov 5 hard stop. A reviewer read every README claim in the five repos and compared it with the evidence in those repos: verify reports, test results quoted in them, class transcripts and CAVEATS. The reviewer was the `redteam` subagent, running Claude Fable 5.1. It gave each project a verdict:
+This is the last check before the Nov 5 hard stop. A reviewer read every claim in the repo and project READMEs of the five repos (not the fixtures README in td-2-soc) and compared it with the evidence in those repos: verify reports, test results quoted in them, class transcripts and CAVEATS. The reviewer was the `redteam` subagent, running Claude Fable 5.1. It gave each project a verdict:
 - **ship**: the claims match the evidence
 - **fix first**: small wording or status fixes are needed before a hiring manager reads it
 - **cut**: the project is moved to after Nov 5
@@ -31,6 +31,8 @@ Decisions Eojin made at the start of this session:
 | 4A Containment Runbook Copilot | cut | README says plans "will be scored" and refers to a T4-C2 manual grade that will not happen (evidence: `td-4-cloud/docs/verify/T4-S03.md` AC4–6 N/A deferred) | Status `Cut`; remove the T4-C2 references | td-4-cloud/README.md l.13, l.26; 4a-containment-copilot/README.md l.4, 17, 38, 45, 50 | Claude session (td-4) |
 
 Totals: 2 ship, 6 fix first, 4 cut. The two "ship" rows still carry small wording items in the per-repo sections; they can go in the same short sessions.
+
+How verdicts were mapped (director): the table uses each reviewer's per-project verdict line. 1E is fix first, not ship, because its top issue is HIGH: the root README says the tickets are solved. 3E's issues are all MEDIUM or LOW. Where a reviewer's summary sentence said "ships" for a fix-first project, the per-project line wins.
 
 ---
 
@@ -68,13 +70,13 @@ Fable's verdict: **fix first**. The hub-side fixes are made in this PR.
 | docs/STORY.md | "**2A** is an AI triage assistant that must not be fooled…" | "was built to test…; cut" | `td-2-soc/docs/verify/T2-S03.md` |
 | docs/STORY.md | "**3A** makes sure an AI assistant…" | "was built so that…; cut, not evaluated" | `td-3-iam/docs/verify/T3-S04.md` |
 | docs/STORY.md | "**4A** drafts a containment checklist … scored against my answer keys" | "was built to draft…; cut, no plans scored" | `td-4-cloud/docs/verify/T4-S03.md` |
+| docs/STORY.md (verifier) | "a temporary password that dies after 60 minutes" | "a temporary password that a maintenance job rotates after 60 minutes (the job is not scheduled yet)" | `td-1-helpdesk/1h-verified-reset/README.md` l.16, Limits l.166 |
 | docs/STORY.md (director) | "**2E** is me hunting that activity…" | "is my hunt for that activity… (data sealed; my hunt is still to do)" | `td-2-soc/docs/verify/T2-S01.md` AC3 NEEDS-EOJIN |
 | docs/STORY.md (director) | "**3E** configures the identity tenant…" | adds "I am still configuring it" | `td-3-iam/docs/verify/T3-S01.md`; 3E README Results |
 | docs/STORY.md (director) | "**4E** locks the Azure subscription…" | adds "(written and tested; not yet applied to Azure)" | `td-4-cloud/docs/verify/T4-S01.md` AC9 |
 
-Checked and kept, because the evidence supports them:
+Checked and kept, because the evidence supports it:
 - STORY.md "ten practice tickets, four of them exactly this call" (`td-1-helpdesk/1e-front-desk-casebook/README.md` l.23)
-- STORY.md "a temporary password that dies after 60 minutes" (`td-1-helpdesk/1h-verified-reset/README.md` l.16)
 
 ## Track 1: td-1-helpdesk
 Fable's verdict: **fix first** (wording and status words only). 1H ships, 1E ships as a scaffold, 1A is cut.
@@ -102,6 +104,7 @@ Fable's verdict: **fix first** (wording and status words only). 1H ships, 1E shi
 | README.md l.27 | "`docs/learning/<session>.md` — my graded answers from the class sessions" | "(none yet; no class session has been held)" | same |
 | README.md l.28 | "`COSTS.md` logs the AI credit spent" | add "(balances still to be recorded)" | T1-S01…S04 verify, COSTS NEEDS-EOJIN |
 | 1a-bot-stress-test/README.md l.5 | "The framework is complete. The real stress-test run is pending." | "Status: Cut. The framework is built (T1-S04); the evaluation moved past Nov 5, 2026." | `docs/verify/T1-S04.md` |
+| README.md / 1h-verified-reset/README.md | any line saying the temporary password simply expires after 60 minutes | add "when the maintenance job runs (not scheduled yet)" | 1H README Limits l.166 |
 | 1h-verified-reset/README.md l.142 | "he reviews the code and explains it back" | "will review the code and explain it back in a class session (not yet held)" | no transcript |
 | docs/RUN-SHEET.md | T1-S04 "FRAMEWORK DONE — real eval deferred"; T1-C2 "TODO" | `CUT` for both | Eojin's decision |
 
@@ -138,7 +141,7 @@ Fable's verdict: fix first (wording only, about 10 edits), then ship 3E and 3H; 
 
 **Issues, ranked**
 1. HIGH: README l.17 "Tested against 30 malicious requests (English and Korean) written by Eojin". No cases and no runs exist (`docs/verify/T3-S04.md` AC7, AC9).
-2. HIGH: README l.35 "Eojin can rebuild and explain it". The T3-C1 transcript shows 5/20, five zero grades, and the live change passed only after Claude gave the answer (`docs/learning/T3-C1.md`).
+2. HIGH: README l.35 "Eojin can rebuild and explain it". The T3-C1 transcript shows 5/20, five zero grades, and the live change passed on the second attempt, after Claude named the two problems (`docs/learning/T3-C1.md`).
 3. MEDIUM: `3h-lifecycle/README.md` contradicts itself. l.68 says "Leaver rows are never blocked." l.271 says "A malformed leaver row is blocked like any other". Fix l.68: "never blocked by the proofing or approver checks (a row that cannot be read is still blocked; see Limits)."
 4. MEDIUM: README l.9 and l.16 say "class pending"; T3-C1 was held on 2026-11-01.
 5. MEDIUM: README l.56 says the environment installs Keycloak with `environment/setup.sh`, but Keycloak was missing on 2026-11-01 (`docs/CAVEATS.md`, two lines). This blocks any `-m keycloak` check. **Eojin:** fix the environment's setup script.
@@ -226,9 +229,9 @@ Before sending, the director scanned the allowed files and found no KQL detectio
 
 Window: from now (Sun Nov 1, 10 PM KST) to the **hard stop, Thu Nov 5 4:00 PM KST**. No session starts after 4:00 PM, even if credit remains.
 
-**Remaining balance:** `TODO(verify)`. Eojin, read it from the usage menu and write it here. Remaining = balance − reserve, where the reserve is the cost of the (a) items ($14). If the balance is below $28, run the (a) items first and then (c) in the order listed, stopping when the credit runs out.
+**Remaining balance:** `TODO(verify)`. Eojin, read it from the usage menu and write it here. Reserve = the cost of the (a) fix-first items ($14). Remaining for the other sinks = balance − $14, and the (c) and (d) items ($14) must fit in it, so the full list needs a balance of at least $28. If the balance is lower, run the (a) items first and then (c) in the order listed, stopping when the credit runs out.
 
-Costs are estimates. They come from the session caps in `docs/MASTER-RUN-SHEET.md`, and a docs-only fix session is assumed to cost about the same as H01 ($4 cap). These are not measured costs.
+Costs are estimates. They come from the session caps in `docs/MASTER-RUN-SHEET.md`, and a docs-only fix session (about 40 minutes, verifier only) is estimated at $3, a little under H01's $4 cap. These are not measured costs.
 
 | # | Group | Repo | What | Est. cost | Est. minutes | Start by (KST) | Who |
 |---|---|---|---|---|---|---|---|
@@ -243,6 +246,6 @@ Costs are estimates. They come from the session caps in `docs/MASTER-RUN-SHEET.m
 | 9 | (c) class | td-2-soc | T2-C1, class on 2E + 2H. Needs Eojin's 2E hunt labels committed first (his own hours, no credit). Skip it if the labels aren't in by Nov 5, 10:00 AM | $5 | 90 | Thu Nov 5, 10:30 AM | Eojin (labels + interview); Claude teaches |
 | 10 | (d) polish | takeover-defense | README polish (Contact line, source-link TODOs), folded into item 5 | $0 extra | 0 extra | with item 5 | Eojin |
 
-**Total estimated cost: $28** (a: $14; c: $14; b and d: $0). Check: $28 ≤ remaining balance? `TODO(verify)`, needs Eojin's balance.
+**Total estimated cost: $28** (a: $14 reserve; c: $14; b and d: $0). Check: is the balance at least $28? `TODO(verify)`, needs Eojin's balance.
 
 Order rule: run the four track fix sessions before their classes, and the hub re-sync (item 5) last. Item 5 must start by 1:00 PM on Nov 5 so it is merged before the 4:00 PM stop. Housekeeping that costs no credit, for Eojin: fill in `COSTS.md` in each repo, open the source links, and close the NEEDS-EOJIN items in judgement call 1.
