@@ -229,7 +229,7 @@ Before sending, the director scanned the allowed files and found no KQL detectio
 
 Window: from now (Sun Nov 1, 10 PM KST) to the **hard stop, Thu Nov 5 4:00 PM KST**. No session starts after 4:00 PM, even if credit remains.
 
-**Remaining balance:** `TODO(verify)`. Eojin, read it from the usage menu and write it here. Reserve = the cost of the (a) fix-first items ($14). Remaining for the other sinks = balance − $14, and the (c) and (d) items ($14) must fit in it, so the full list needs a balance of at least $28. If the balance is lower, run the (a) items first and then (c) in the order listed, stopping when the credit runs out.
+**Remaining balance: $82** (Eojin, usage menu, Sun Nov 1, evening KST, after H99). Reserve = the cost of the (a) fix-first items ($14). Remaining for the other sinks = $82 − $14 = $68, and the (c) and (d) items ($14) fit in it. **About $54 is not yet assigned** (see the end of this section).
 
 Costs are estimates. They come from the session caps in `docs/MASTER-RUN-SHEET.md`, and a docs-only fix session (about 40 minutes, verifier only) is estimated at $3, a little under H01's $4 cap. These are not measured costs.
 
@@ -246,6 +246,8 @@ Costs are estimates. They come from the session caps in `docs/MASTER-RUN-SHEET.m
 | 9 | (c) class | td-2-soc | T2-C1, class on 2E + 2H. Needs Eojin's 2E hunt labels committed first (his own hours, no credit). Skip it if the labels aren't in by Nov 5, 10:00 AM | $5 | 90 | Thu Nov 5, 10:30 AM | Eojin (labels + interview); Claude teaches |
 | 10 | (d) polish | takeover-defense | README polish (Contact line, source-link TODOs), folded into item 5 | $0 extra | 0 extra | with item 5 | Eojin |
 
-**Total estimated cost: $28** (a: $14 reserve; c: $14; b and d: $0). Check: is the balance at least $28? `TODO(verify)`, needs Eojin's balance.
+**Total estimated cost: $28** (a: $14 reserve; c: $14; b and d: $0). Check: $28 ≤ $82, so it fits, leaving about $54 unassigned.
+
+**Unassigned $54.** Spending it on evidence would mean un-cutting one AI evaluation, which needs your inputs first (attack scripts, injection strings, access requests or answer keys). That is a scope change only you can make. Without it, the next best use is a self-study class on the 3H questions you missed in T3-C1 (about $4, td-3-iam), which adds evidence, not polish. Otherwise let it expire: nothing in this list should start after 4:00 PM KST on Nov 5.
 
 Order rule: run the four track fix sessions before their classes, and the hub re-sync (item 5) last. Item 5 must start by 1:00 PM on Nov 5 so it is merged before the 4:00 PM stop. Housekeeping that costs no credit, for Eojin: fill in `COSTS.md` in each repo, open the source links, and close the NEEDS-EOJIN items in judgement call 1.

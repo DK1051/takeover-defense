@@ -25,3 +25,4 @@ One line per caveat, newest last, in this exact format (from CLAUDE.md):
 - 2026-11-01 H99 | Branch is `claude/beautiful-volta-g586sd` (the one this session can push to), not `h99-final-gate` | impact: this session | recorded | needs Eojin: no
 - 2026-11-01 H99 | Credit balance not given, so the credit-sink total ($28) cannot be checked against what remains | impact: this session / credit sink | balance left as TODO(verify) in FINAL-GATE.md | needs Eojin: yes
 - 2026-11-01 H99 | Hub status cells now follow the gate and differ from several track READMEs until their fix sessions run | impact: T1/T2/T3/T4 fix sessions | README notes the exception; fixes listed in FINAL-GATE.md | needs Eojin: no
+- 2026-11-01 H99 | Eojin gave the balance after the PR merged: $82 | impact: credit sink | recorded in FINAL-GATE.md and COSTS.md in a follow-up PR; the $28 list fits and about $54 is unassigned | needs Eojin: yes (decide on the $54; give the 'balance before' if known)
