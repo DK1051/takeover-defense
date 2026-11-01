@@ -25,6 +25,10 @@ Eojin
 
 ## H99 — final gate + credit sink plan
 Claude (models used)
-- (to be filled at wrap)
+- Director (Opus 5.5): checked the Needs list, inventoried the five repos, wrote the exclusion list and the five reviewer path lists, wrote `docs/FINAL-GATE.md` (12-row verdict table, per-repo issues and claims to soften, credit-sink plan), chose the status words (`In progress` for 1E/2E/3E) and added three STORY.md softenings the hub reviewer could not see (marked "director").
+- `redteam` (Fable 5.1): five calls, one per repo, documents only (READMEs, verify reports, the T3-C1 transcript, CAVEATS). None refused. Its verdicts are the gate verdicts.
+- `chores` (Haiku 5.5): applied the hub README status cells and the softened wording in `README.md` and `docs/STORY.md`.
+- `verifier` (Opus 5.5): checked AC1–AC7 and wrote `docs/verify/H99.md`.
+- No track repo was edited.
 Eojin
-- (to be filled at wrap)
+- Approved a one-time exception to "one repo per session" for H99, ruled that the deferred evals and their classes count as CUT, and approved the plan and exclusion list. Still to do: give the credit balance (`COSTS.md` and the credit-sink section), make the judgement calls at the end of `docs/FINAL-GATE.md`, and run the fix sessions in order.
