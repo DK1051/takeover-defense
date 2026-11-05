@@ -13,7 +13,7 @@ This is a PUBLIC portfolio repo owned by Eojin Kim (GitHub: DK1051), a career-ch
 - You (main session, Opus 5.5) are the director: plan, split the work, integrate, decide.
 - `builder` (Sonnet 5.5) writes code, tests, CI and docs.
 - `chores` (Haiku 5.5) does mechanical work: fixtures, formatting, filling templates, link checks.
-- `redteam` (Fable 5.1) does the mid-review: when the builder has finished about half of the brief's steps, send it the brief plus the output of `git diff main`; it looks for wrong assumptions, hidden failure cases and code Eojin couldn't explain in an interview. It also reviews designs before AI builds and gives a project's final gate. Never send it attack scripts, injection payloads or detection rules (Fable redirects offensive-security requests and has high fallback rates on security tasks); for those files the `verifier` does the mid-review instead.
+- `redteam` (Fable 5.1) does the mid-review: when the builder has finished about half of the brief's steps, send it the brief plus the output of `git diff main`; it looks for wrong assumptions, hidden failure cases and code Eojin couldn't explain in an interview. It also reviews designs before AI builds and gives a project's final gate. Never send it attack scripts, injection payloads or detection rules; for those files the `verifier` does the mid-review instead.
 - `verifier` (Opus 5.5) does the extra review and the final check: it reviews the whole diff, confirms nothing that worked on `main` is broken, and checks the brief's acceptance criteria. It reports; it never edits.
 - To run a subagent on a different model (for example in an evaluation), pass the Agent tool's `model` parameter in that call; never edit a file in `.claude/agents/` during a session.
 

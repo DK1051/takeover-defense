@@ -1,6 +1,15 @@
 # Takeover Defense — stopping the helpdesk-reset account takeover at every layer
 
-I'm Eojin Kim, preparing for IT helpdesk, security operations (SOC) and identity and access management (IAM) roles in Canada. This portfolio is twelve planned projects built around one real attack: a criminal phones a company's IT helpdesk, pretends to be an employee who lost their phone, and talks the agent into resetting their password and their MFA (multi-factor authentication — the second check, such as a code on your phone, that protects a login). Once that reset goes through, the criminal owns the account. Five are built (1H, 2H, 3H, 4E, 4H); three have their scaffold built and my own part still in progress (1E, 2E, 3E); and the four AI projects (1A, 2A, 3A, 4A) were cut after their frameworks were built. Together they show how a helpdesk technician, a security analyst, an identity administrator and a cloud administrator each stop that attack at their own layer. Everything runs against a fictional company, Maple Harbour Credit Union in Toronto, so no real people or data are involved.
+I'm Eojin Kim, preparing for IT helpdesk, security operations (SOC) and identity and access management (IAM) roles in Canada. This portfolio is twelve planned projects built around one real attack: a criminal phones a company's IT helpdesk, pretends to be an employee who lost their phone, and talks the agent into resetting their password and their MFA (multi-factor authentication — the second check, such as a code on your phone, that protects a login). Once that reset goes through, the criminal owns the account. Five are built (1H, 2H, 3H, 4E, 4H); three have their scaffold built and my own part still in progress (1E, 2E, 3E); and the four AI projects (1A, 2A, 3A, 4A) were cut after their frameworks were built. Together they are designed to show how a helpdesk technician, a security analyst, an identity administrator and a cloud administrator each stop that attack at their own layer. Everything is built around a fictional company, Maple Harbour Credit Union in Toronto, so no real people or data are involved.
+
+**Who built what:** Claude (AI) wrote the code and tests for the five built projects under Eojin's direction (the roles are listed under "How AI was used" below), and none of them is `Verified` yet. Each track repo's `AI-USE.md` lists, per project, what Claude did and what Eojin did; the hub's own [AI-USE.md](AI-USE.md) covers only the hub, which holds no code.
+
+**Start here (5 minutes).**
+
+1. [The attack story](docs/STORY.md) — the attack chain and which project defends each step.
+2. [1H Verified Reset Service](https://github.com/DK1051/td-1-helpdesk/tree/main/1h-verified-reset) — the helpdesk layer.
+3. [2H Takeover Detection Pack](https://github.com/DK1051/td-2-soc/tree/main/2h-detection-pack) — the SOC layer.
+4. [Class transcript T3-C1](https://github.com/DK1051/td-3-iam/blob/main/docs/learning/T3-C1.md) — my graded answers, scores included.
 
 ## Why this attack
 
@@ -16,7 +25,7 @@ The attack chain and which project defends each step: [docs/STORY.md](docs/STORY
 
 **Final gate done (as of Nov 1, 2026).** Built: 1H, 2H, 3H, 4E, 4H (Claude's part, with verify reports). In progress: 1E, 2E, 3E (scaffolds built; my own part is still to do). Cut: 1A, 2A, 3A, 4A (frameworks built; the real evaluations moved past Nov 5). Class sessions held: T3-C1. No project is `Verified` yet: each verify report still has at least one open item for me, mostly recording costs. The verdict per project and the fix list are in [docs/FINAL-GATE.md](docs/FINAL-GATE.md). Building runs from D0 (Oct 22, 2026) to a hard stop on Nov 5, 2026 at 4:00 PM KST. Schedule: [docs/MASTER-RUN-SHEET.md](docs/MASTER-RUN-SHEET.md).
 
-Status words used everywhere in this portfolio: `Planned` → `In progress (session IDs)` → `Built` → `Verified` (verify report linked) → `Cut` (moved to after Nov 5). The table below is updated at sessions H01 and H99 by copying each track's own README; if this table and a track README ever disagree, the track README is right — except right after H99, when this table follows docs/FINAL-GATE.md and the track READMEs are fixed in their next session.
+Status words used everywhere in this portfolio: `Planned` → `In progress (session IDs)` → `Built` → `Verified` (verify report linked) → `Cut` (moved to after Nov 5). The table below is updated at sessions H01 and H99 by copying each track's own README; if this table and a track README ever disagree, the track README is right — except right after H99, when this table follows docs/FINAL-GATE.md and the track READMEs are fixed in their next session. Those track fixes are not all done yet: some track READMEs still carry stale status words or claims that docs/FINAL-GATE.md flags. Where they disagree today, trust this table and docs/FINAL-GATE.md.
 
 ## The twelve projects
 
@@ -45,7 +54,7 @@ I direct; Claude builds; nothing counts until it is checked. Every repo carries 
 - **Verifier** (Claude Opus 5.5): checks every finished session against the brief's acceptance criteria and writes a report. It never edits.
 - **Red team** (Claude Fable 5.1): blunt design reviews before AI builds where the brief called for one and the final gate on every README claim. It is never given attack content.
 
-My part is the human work the AI cannot honestly do for me: solving the helpdesk tickets, writing the knowledge-base articles, the attack scripts and injection strings for the AI projects are mine to write (their evaluations were cut before any ran), hunting through the logs and committing my labels before the answer key is unsealed, configuring the tenant, writing the containment answer keys from Microsoft documentation, and sitting the "class" sessions where I explain a project back and get graded (one held so far: T3-C1).
+My part is the human work the AI cannot honestly do for me: solving the helpdesk tickets, writing the knowledge-base articles, the attack scripts and injection strings for the AI projects I planned to write (none were written before the evaluations were cut), hunting through the logs and committing my labels before the answer key is unsealed, configuring the tenant, writing the containment answer keys from Microsoft documentation, and sitting the "class" sessions where I explain a project back and get graded (one held so far: T3-C1).
 
 **The honesty rule.** Everything is checked: a project is marked `Verified` only when its verify report says so, and the class transcripts record, graded honestly, how far I can explain and rebuild each piece (one so far: T3-C1). `AI-USE.md` in each repo lists, per project, what Claude did (and which model) and what I did.
 
@@ -63,7 +72,7 @@ My part is the human work the AI cannot honestly do for me: solving the helpdesk
 | [takeover-defense](https://github.com/DK1051/takeover-defense) | This hub: story, index, schedule, shared rules |
 | [td-1-helpdesk](https://github.com/DK1051/td-1-helpdesk) | Track 1 · Helpdesk (CompTIA A+): stop the reset at the front door |
 | [td-2-soc](https://github.com/DK1051/td-2-soc) | Track 2 · SOC (CompTIA Security+): catch the takeover the helpdesk missed |
-| [td-3-iam](https://github.com/DK1051/td-3-iam) | Track 3 · IAM (Microsoft SC-300): make a stolen reset worthless |
+| [td-3-iam](https://github.com/DK1051/td-3-iam) | Track 3 · IAM (Microsoft SC-300): make a fraudulent reset much less useful |
 | [td-4-cloud](https://github.com/DK1051/td-4-cloud) | Track 4 · Cloud (Microsoft AZ-104): contain the blast radius in Azure |
 
 ## Contact
