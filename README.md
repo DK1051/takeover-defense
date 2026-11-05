@@ -61,7 +61,7 @@ My part is the human work the AI cannot honestly do for me: solving the helpdesk
 ## How to verify my work
 
 - **Verify reports** — `docs/verify/<session>.md` in each repo: one line per acceptance criterion with PASS / FAIL / NEEDS-EOJIN and the evidence (test output, file paths).
-- **Class transcripts** — `docs/learning/<session>.md`: my graded answers to the "why" questions and one live code change. One transcript so far: T3-C1 in td-3-iam.
+- **Class transcripts** — `docs/learning/<session>.md`: my graded answers to the "why" questions and one live code change. One transcript so far: T3-C1 in td-3-iam, where I dictated the live change and it passed on the second attempt.
 - **Commit history** — one pull request per session (cloud sessions used the `claude/…` branch the sandbox allowed; see docs/CAVEATS.md); each PR description says what changed.
 - **Costs and caveats** — `COSTS.md` logs the AI credit spent per session where I recorded the balance (some lines are still placeholders); `docs/CAVEATS.md` logs what went wrong and what I changed because of it.
 
